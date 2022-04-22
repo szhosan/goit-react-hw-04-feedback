@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './FeedBackControlPanel.module.css';
+import PropTypes from 'prop-types';
 
 const FeedbackControlPanel = ({ options, onLeaveFeedback }) => {
   const items = Object.keys(options);
@@ -22,6 +23,15 @@ const FeedbackControlPanel = ({ options, onLeaveFeedback }) => {
       </ul>
     </div>
   );
+};
+
+FeedbackControlPanel.propTypes = {
+  options: PropTypes.shape({
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+  }),
+  onLeaveFeedback: PropTypes.func.isRequired,
 };
 
 export default FeedbackControlPanel;

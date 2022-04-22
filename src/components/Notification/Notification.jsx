@@ -1,4 +1,5 @@
 import s from './Notification.module.css';
+import PropTypes from 'prop-types';
 
 function Notification({ message }) {
   return (
@@ -7,5 +8,7 @@ function Notification({ message }) {
     </div>
   );
 }
+
+Notification.propTypes = { message: PropTypes.number.isRequired };
 
 export default Notification;

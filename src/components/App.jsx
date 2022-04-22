@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import FeedbackControlPanel from './FeedBackControlPanel/FeedBackControlPanel';
-import Statistics from './FeedbackStatisticsPanel/FeedbackStatisticsPanel';
+import Statistics from './FeedbackStatisticsPanel/FeedBackStatisticsPanel';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
 
