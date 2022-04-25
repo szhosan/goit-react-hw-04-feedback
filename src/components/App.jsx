@@ -19,8 +19,8 @@ function App() {
   };
 
   const countFeedBack = item => {
-    this.setState(prevState => {
-      return { [item]: prevState[item] + 1 };
+    setState(prevState => {
+      return { ...prevState, [item]: prevState[item] + 1 };
     });
   };
 

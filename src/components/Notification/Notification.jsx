@@ -9,6 +9,6 @@ function Notification({ message }) {
   );
 }
 
-Notification.propTypes = { message: PropTypes.number.isRequired };
+Notification.propTypes = { message: PropTypes.string.isRequired };
 
 export default Notification;
