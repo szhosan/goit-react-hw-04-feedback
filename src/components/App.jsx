@@ -19,11 +19,8 @@ function App() {
   };
 
   const countFeedBack = item => {
-    let feedbackObj = {};
-    setState(prevState => {
-      feedbackObj = { ...prevState };
-      feedbackObj[item] = feedbackObj[item] + 1;
-      return feedbackObj;
+    this.setState(prevState => {
+      return { [item]: prevState[item] + 1 };
     });
   };
 
@@ -41,8 +38,8 @@ function App() {
             good={good}
             neutral={neutral}
             bad={bad}
-            total={countTotalFeedback}
-            positivePercentage={countPositiveFeedbackPercentage}
+            total={countTotalFeedback()}
+            positivePercentage={countPositiveFeedbackPercentage()}
           />
         </Section>
       ) : (
